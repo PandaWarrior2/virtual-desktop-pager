@@ -1,0 +1,38 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "resource.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+IDI_VDESKTOP ICON "assets\\vdesktop.ico"
+
+1 VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0
+ FILEOS VOS_NT_WINDOWS32
+#ifdef PAGER_DLL
+ FILETYPE VFT_DLL
+#else
+ FILETYPE VFT_APP
+#endif
+ FILESUBTYPE 0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Moonl1ght"
+            VALUE "Author", "Moonl1ght"
+            VALUE "FileDescription", "VDesktop Pager — virtual desktops in the Windows taskbar"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "ProductName", "VDesktop Pager"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
+
